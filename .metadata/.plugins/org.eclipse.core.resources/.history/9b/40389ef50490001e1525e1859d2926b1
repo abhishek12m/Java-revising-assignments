@@ -1,0 +1,24 @@
+package collections;
+
+class Person implements Comparable<Person>{
+	private int weight;
+	private int height;
+	private String name;
+	public Person(int weight, int height, String name) {
+		super();
+		this.weight = weight;
+		this.height = height;
+		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "Person [weight=" + weight + ", height=" + height + ", name=" + name + "]";
+	}
+	
+	public int compareTo(Person person) {
+		if(this.weight!=person.weight) {
+			return Integer.compare(this.weight, person.weight);
+		}
+		Integer.compare(this.weight, person.height);
+	}
+}

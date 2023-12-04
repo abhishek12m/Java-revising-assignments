@@ -1,0 +1,27 @@
+package collections.hastable;
+
+import java.util.Hashtable;
+
+public class HashTableExample {
+	public static void main(String[] args) {
+		Hashtable<BirthDate, Emplyoee> hashtable=new Hashtable<>();
+		
+		BirthDate date1=new BirthDate(1, 1, 1990);
+		BirthDate date2=new BirthDate(1, 1, 1995);
+		
+		hashtable.put(date1, new Emplyoee("Aman"));
+		hashtable.put(date2, new Emplyoee("Abhishek"));
+		
+		BirthDate searchDate=new BirthDate(1, 1, 2000);
+		
+		Emplyoee retrievedEmployee=hashtable.get(searchDate);
+		
+		if(retrievedEmployee==null) {
+			System.out.println("Not found: "+searchDate);
+		}
+		else {
+			System.out.println("found: "+retrievedEmployee);
+		}
+	}
+
+}

@@ -1,0 +1,11 @@
+package collections;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class ArrayListBackwardPrint {
+	
+	ArrayList<String> arrayList=new ArrayList<>(Arrays.asList("A","B","C","D"));
+	
+
+}
